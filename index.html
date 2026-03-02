@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intramurals SY 2025-2026</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/1200x/68/39/ef/6839ef1b7f3dcb45fc2ffab818c6fae1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333586;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar-left { color: #fff; font-weight: bold; font-size: 22px; }
+        .navbar-right { display: flex; gap: 30px; }
+        .navbar-right a { color: #fff; text-decoration: none; font-size: 18px; }
+        .navbar-right a:hover { color: #ffd700; }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            margin: 20px auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #2b5798, #93cbe9);
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">Intramurals SY 2025-2026</div>
+        <div class="navbar-right">
+            <a href="signup.html">Sign Up</a>
+            <a href="teamchecker.html">Team Checker</a>
+            <a href="players.html">Players</a>
+        </div>
+    </nav>
+
+    <!-- Create Account -->
+    <div class="card">
+        <h2>Create Account</h2>
+        <input type="text" id="username" placeholder="User:" required minlength="7">
+        <input type="password" id="password" placeholder="Password:" required minlength="10">
+        <button py-click="sign_up">🌈 Sign In</button>
+        <div id="output"></div>
+    </div>
+
+    <!-- Seatwork -->
+    <div class="card">
+        <h2>Seatwork Third Quarter</h2>
+        <p>Are you done with the online registration?</p>
+        <label><input type="radio" name="registration" value="yes"> Yes</label>
+        <label><input type="radio" name="registration" value="no"> No</label>
+
+        <p>Do you have medical clearance?</p>
+        <label><input type="radio" name="medical" value="yes"> Yes</label>
+        <label><input type="radio" name="medical" value="no"> No</label>
+
+        <p>What's your Grade & Section?</p>
+        <select id="grade">
+            <option>Enter Grade</option><option>7</option><option>8</option><option>9</option>
+            <option>10</option><option>11</option><option>12</option>
+        </select>
+        <select id="section">
+            <option>Enter Section</option>
+            <option>RUBY</option><option>TOPAZ</option><option>SAPPHIRE</option>
+            <option>EMERALD</option><option>JADE</option>
+        </select>
+        <button py-click="sign_up">🌈 Submit</button>
+        <div id="output2"></div>
+    </div>
+
+    <!-- Players -->
+    <div class="card">
+        <h2>Intramural Players:</h2>
+        <button py-click="check">Click Here!</button>
+        <div id="output3"></div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
